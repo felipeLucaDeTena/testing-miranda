@@ -1,19 +1,36 @@
 {
-  "name": "testing-miranda",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest",
-    "test:watch": "jest  --watchAll",
-    "test:coverage": "jest --watchAll --coverage"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "jest": "^28.1.1"
-  },
-  "devDependencies": {
-    "@babel/plugin-transform-modules-commonjs": "^7.18.2"
-  }
+    "name": "testing-miranda",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "jest",
+        "test:watch": "jest  --watchAll",
+        "test:coverage": "jest --watchAll --coverage"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "eslint": "^8.17.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jest": "^26.5.3",
+        "jest": "^28.1.1"
+    },
+    "babel": {
+        "env": {
+            "test": {
+                "plugins": [
+                    "@babel/plugin-transform-modules-commonjs"
+                ]
+            }
+        }
+    },
+    "prettier": {
+        "singleQuote": true
+    },
+    "devDependencies": {
+        "@babel/plugin-transform-modules-commonjs": "^7.18.2"
+    }
 }
